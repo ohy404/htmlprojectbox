@@ -10,32 +10,33 @@
     header{width:100%;height:15%;background: yellow;}
     nav{width:100%;height: 15%;background: orange;}
     section{width: 100%;height: 70%;float: left;background: olivedrab;}
-    aside{width: 50%;height: 30%;float: left;background: blue;}
-    article{width: 50%;height: 30%;float: right;background: skyblue;}
+    aside{width: 50%;height: 21%;float: left;background: blue;}
+    article{width: 50%;height: 21%;float: right;background: skyblue;}
     footer{width: 100%;height: 15%;clear: both;background: plum;}
     .topic{display: flex; flex-flow: row wrap;flex-grow: 1; justify-content: space-between;} 
-    .topicpost{display: flex;flex-flow: row wrap; flex-grow: 1;justify-content: space-between;}
     .item {flex: 1 1 0;} .item:nth-child(2) {flex: 6 1 0;}
     .count{flex: 1 1 0; text-align: center;}
     #check-btn { display: none; } #check-btn:checked ~ .menubars { display: block; } 
     .menubars { display: none; }
+    .title{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+    div strong{font-size: medium;font-style: oblique;}
 </style>
 </head>
 <body>
-    <header><table><a href="9월20일.html"><img src="img/title.png" alt="title"></a></table></header>
+    <header><table><a href="index.html"><img src="img/title.png" alt="title"></a></table></header>
     <nav>
         <table><form><td><input type="image" width="50%" height="10%" src="img/profile.png" alt="profile"></td>
             <td><input type="image" width="50%" height="10%" src="img/message.png" alt="message"></td>
-            <td><a href="로그인.html" target="_blank"><img width="50%" height="10%" src="img/login.png" alt="login"></a></td>
+            <td><a href="login.html" target="_blank"><img width="50%" height="10%" src="img/login.png" alt="login"></a></td>
             <td><input type="image" width="50%" height="10%" src="img/logout.png" alt="logout"></td>
         </form></table>
     </nav>
-    <aside><img width="20%" height="10%" src="img/New Topic.png" alt="Topic"><br>
+    <aside><img width="20%" height="9%" src="img/New Topic.png" alt="Topic"><hr>
         <tab border="0.1">
             <div class="topic">
-                <div class="count">번호</div>
-                <div class="item">제목</div>
-                <div class="item">작성자</div>
+                <div class="count"><strong>번호</strong></div>
+                <div class="item"><strong>제목</strong></div>
+                <div class="item"><strong>작성자</strong></div>
             </div>
             <div class="topic">
                 <div class="count">1</div>
@@ -62,13 +63,22 @@
                 <div class="item">도움</div>
                 <div class="item">ㅠㅠ</div>
             </div>
-    </table>
+        </tab>
     </aside>
-    <article><table><img width="20%" height="10%" src="img/News.png" alt="News"></table><br>
-        <thead><td> </td><td>주제</td></thead>
-        <tbody><td> </td><td>   </td></tbody>
+    <article><img width="20%" height="11%" src="img/News.png" alt="News"><hr>
+        <tab border="0.1">
+            <div class="topic">
+                <div class="item"><img width="65" height="65" src="img/OIP.jpg" alt="hamster"></div>
+                <div class="item">설치류 인스톨중</div>
+            </div>
+            <div class="topic">
+                <div class="item"><img width="65" height="65" src="img/hamster tag.png" alt="hamster"></div>
+                <div class="item">저는 산책시키고 다녀요</div>
+            </div>  
+        </tab>
     </article>
-    <section><table><img src="img/post.png" width="10%" height="5%" alt="post"></table></section>
+    <section><table><img src="img/post.png" width="10%" height="5%" alt="post"></table>
+    </section>
     <footer>footer</footer>
 </body>
 </html>

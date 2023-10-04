@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--   <title>가상 클래스 셀렉터</title>
+
+    <style>
+        h3:first-letter{color: red;}
+        h3:active{color : blue;}
+        li:hover{background: yellowgreen;}
+    </style>
+</head>
+<body>
+    <h3>Web Programmming</h3><hr>
+    <p>2학기 <strong>학습내용</strong></p>
+
+    <ul>
+        <li>HTML5</li>
+        <li><strong>CSS</strong></li>
+        <li>JAVASCRIPT</li>
+    </ul>
+    <p>60점 이하는 F!</p>
+</body>
+</html>
+--> 
+<title>셀렉터 만들기</title>
+
+    <style>
+        h3, li{/* 태그 이름 셀렉터*/ color: brown;}
+        div > div > strong{/*자식 셀렉터*/ background: yellow;}
+        ul strong{/*자손 셀렉터*/ color: dodgerblue;}
+        .warning{/*class 셀렉터*/ color: red;}
+        body.main{/*class 셀렉터*/ background: aliceblue;}
+        #list{/*id 셀렉터*/ background: mistyrose;}
+        #list span{/*자손 셀렉터*/ color: forestgreen;}
+        h3:first-letter{/*가상 클래스 셀렉터*/ color: red; font-size: xx-large;}
+        li:hover{/*가상 클래스 셀렉터*/ background: yellowgreen;}
+    </style>
+</head>
+<body class="main">
+    <h3>Web Programmming</h3><hr>
+    <div>2학기 <strong>학습내용</strong>입니다.</div>
+
+    <ul id="list">
+        <li><span>HTML5</span></li>
+        <li><strong>CSS</strong></li>
+        <li>JAVASCRIPT</li>
+    </ul>
+    <div class="warning">60점 이하는 F</div>
+</body>
+</html>
+
+<!--
+em 배수
+% 퍼센트
+px 픽셀수
+pt 포인터 크기
+pc 피카소
+em 각도
+
+-->
