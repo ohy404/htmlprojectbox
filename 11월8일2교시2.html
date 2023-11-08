@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>내가 좋아하는 음식은</p>
+    <select id="mysel" onchange="myFun()">
+    <option value="짜장면">짜장면</option>
+    <option value="짬 뽕">짬 뽕</option>
+    <option value="탕수육">탕수육</option>
+    </select>
+    <p id="demo"></p>
+    <p id="dmo2"></p>
+    <script>
+        function myFun(){
+            var x = document.getElementById("mysel").value;
+            var y = document.getElementById("dmo2");
+            document.getElementById("demo").innerHTML ="내가 좋아하는 음식은 : "+ x;
+        
+        if(x=='짜장면'){
+            y.innerHTML='<img src="img/Jajangmyeon.jpg">'
+        }
+        else if(x=='짬 뽕'){
+            y.innerHTML='<img src="img/Jjampong.jpg">'
+        }
+        else if(x=='탕수육'){
+            y.innerHTML='<img src="img/tang.jpg">'
+        }
+    }
+    </script>
+</body>
+</html>

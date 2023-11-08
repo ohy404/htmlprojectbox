@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function textWrite(){
+            document.write("<h2>안녕하세요!!</h2>")
+        }
+    </script>
+</head>
+<body>
+    <h3>document.write() 활용</h3><hr>
+    <input type="button" value="인사" onclick="document.getElementById('test').innerHTML='안녕!!!!'">
+    <p id="test"></p>
+    
+    <script>
+        var n=textWrite()
+        n
+        let current = new Date(); //현재 시간을 가진 Date 객체 생성
+    if(current.getSeconds() % 2 == 0)
+        document.body.style.backgroundColor = "violet";
+    else
+        document.body.style.backgroundColor = "lightskyblue";
+    
+        document.write("현재 시간 :");
+        document.write(current.getHours(),"시,");
+        document.write(current.getMinutes(),"분,");
+        document.write(current.getSeconds(),"초<br");
+        function change() {
+            let sp = document.getElementById("mySpan");
+            sp.style.color = "green";
+            sp.style.fontSize = "20px";
+            sp.style.display = "block";
+        }
+        function change1() {
+            let ssp = document.getElementById("mySpan");
+            ssp.style.backgroundColor = "black";
+        }
+        function change2() {
+            let ssp = document.getElementById("mySpan");
+            ssp.style.backgroundColor = "white";
+        }
+    </script>
+
+    <h3>CSS 스타일 동적 변경</h3><hr>
+    <p style="color: blue;">이것은 <span id="mySpan" style="color: red;">문장입니다.</span></p>
+    <input type="button" value="스타일변경" onclick="change()">
+    <input type="button" value="밤" onclick="change1()">
+    <input type="button" value="아침" onclick="change2()">
+</body>
+</html>
+</body>
+</html>
