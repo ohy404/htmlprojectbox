@@ -83,7 +83,7 @@
         <form id="login" style="display: none;">
             <input type="text" placeholder="아이디"/>
             <input type="password" placeholder="패스워드"/>
-            <button>login</button> <p class="message">계정이 없나요? <a href="signup.html">회원가입</a></p>
+            <button>login</button> <p class="message">계정이 없나요? <a href="sig">회원가입</a></p>
             </form>
         <script>
           document.getElementById("myButton").onclick = function() {
@@ -137,8 +137,58 @@
             </div>  
         </tab>
     </article>
-    <section><table><a href="*" target="_blank" id="menubar">Post</a></table>
-        
+    <section><table><a href="*" target="_blank" id="menubar">회원가입</a></table>
+        <fieldset style="text-align: center;">
+            <legend><h3>회원 가입이신가요?</h3></legend><hr>
+            <form>
+                아이디 : <input type="text" value="" id="user"><br>
+                이메일 : <input type="text" value="" id="email"><br>
+                암호 : <input type="password" value="" maxlength="" id="pass"><br>
+                암호확인 : <input type="password" value="" maxlength="" id="passde"><br>
+                <button type="submit">회원 가입</button><br>
+            </fieldset>
+        <fieldset style="text-align: center;">
+        </form>
+            <legend><h3>이미 회원이신가요?</h3></legend><hr>
+            <form>
+                아이디 : <input type="text" value=""><br>
+                이메일 : <input type="text" value=""><br>
+                <button type="submit">비밀 번호 초기화</button><br>
+        </form>
+        </fieldset>
+        <form id="createpost" action="post.html">
+            <input type="text" id="name">
+            <input type="text" id="age">
+            <input type="text" id="topic">
+            <input type="submit" id="submit">
+        </form>
+        <script>
+            
+        localStorage.map(function(forumPost){
+                $('.posts').append( "<ul>
+                         <li>"forumPost.name"</li>
+                         <li>"forumPost.age"</li>
+                         <li>"forumPost.topic"</li>
+                       </ul>")
+            });
+            localStorage.setItem(key, value);
+            //store
+            localStorage.setItem("posts", JSON.stringify(posts));
+
+            //get
+            var posts = JSON.parse( localStorage.getItem("posts") || "[]" );
+            html = '';
+
+            for(var i=0; i<posts.length; i++) {
+                html += '<div class="post">';
+                html += '<b>' + posts[i].topic + '</b> by ' + posts[i].user;
+                html += '</div>';
+            }
+            /*https://stackoverflow.com/questions/30490497/creating-a-forum-with-html5-local-storage*/
+
+            //output the html somehow, with jquery that could be
+            $("body").append(html);
+        </script>
     </section>
     <footer>footer</footer>
 </body>
