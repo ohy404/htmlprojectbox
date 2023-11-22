@@ -6,28 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 <style>
-    html,body{margin:0; padding:0;height:100%;}
-    header{width:100%;height:15%;background: yellow;}
-    nav{width:100%;height: 15%;background: orange;}
-    section{width: 100%;height: 70%;float: left;background: olivedrab;}
-    aside{width: 50%;height: 180px;float: left;background: blue;}
-    article{width: 50%;height: 180px;float: right;background: skyblue;}
-    footer{width: 100%;height: 15%;clear: both;background: plum;}
-    .topic{display: flex; flex-flow: row wrap;flex-grow: 1; justify-content: space-between;} 
+    html,body{margin:0; padding:0;height:100%;background:rgb(122, 122, 122);color :azure;}
+    header{width:100%;height:200px;}
+    section{width: 100%;float: left;}
+    aside{width: 50%;float: left;}
+    article{width: 50%;float: right;}
+    footer{width: 100%;height: 15%;clear: both;}
+    /*.topic{display: flex; flex-flow: row wrap;flex-grow: 1; justify-content: space-between;}
     .item {flex: 1 1 0;} .item:nth-child(2) {flex: 6 1 0;}
     .count{flex: 1 1 0; text-align: center;}
+    */
     #check-btn { display: none; } #check-btn:checked ~ .menubars { display: block; } 
     div strong{font-size: medium;font-style: oblique;}
     #menubar{
             font-family: 'Segoe Print', Tahoma, Geneva, Verdana, sans-serif;
             text-decoration: none; /*링크 보이지 않게 */
             color :azure;
+            background-color:#292B2E;
+            padding: 10px;
+            border-radius: 5px;
+            margin:10px;
+        }
+        #titleindex{
+            font-family: 'Segoe Print', Tahoma, Geneva, Verdana, sans-serif;
+            text-decoration: none; /*링크 보이지 않게 */
+            color :azure;
+            
         }
         #menubar ul{/*여백과 패딩 모두 0*/
             margin: 0;
             padding: 0;
             width: 567px; /*모든 아이템(<li>)을 한 줄에 품을 수 있는 폭*/
-                color :azure;
+            color :azure;
         }
         #menubar ul li{
             display: inline-block;
@@ -54,12 +64,73 @@
         #login form{
             border:solid 1px #c0c0c0;
             padding:10px;
-            display:none;
+            display: none;
         }
+        .container{
+            margin: 5px;
+            padding: 5px;
+        }
+        .subforum{
+            margin-top:20px;
+        }
+        .subforum-title{
+            background-color:#292B2E;
+            padding: 5px;
+            border-radius: 5px;
+            margin:4px;
+        }
+        .subforum-row{
+            display: grid;
+            grid-template-columns: 0% 67% 13% 20%;
+        }
+        .subforum-column,.topic,.news{
+            padding: 10px;
+            margin:4px;
+            border-radius: 5px;
+            background-color:#292B2E;
+        }
+        .topic{
+            display: grid;
+            grid-template-columns: 5% 75% 15% 5%;
+            margin: 5px;
+            padding: 5px;
+        }
+        .tasi{
+            margin: 5px;
+            padding: 1px;
+        }
+        .count{
+            text-align: center;
+        }
+        .stats{
+            text-align: center;
+        }
+        .news{
+            display: grid;
+            grid-template-columns: 90px auto 0% 0%;
+            margin: 5px;
+            padding: 5px;
+        }
+        .subforum-description *{
+            margin-block: 0;
+        }
+        .center{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
 </style>
 </head>
 <body>
-    <header><table><a href="index.html" id="menubar" style="font-size: 80px; text-decoration: none;">Forum</a></table></header>
+    <header>
+        <div style="text-align: right">
+        <div style="text-align: right; font-size: 10px; padding-right: 1px; padding-top: 1px; display:inline-block;">mode</div><br>
+        </div>
+        <table>
+            <a href="index.html" id="titleindex" style="font-size: 80px; text-decoration: none;">Forum</a>
+        </table>
+    </header>
     <nav id="menubar">
         <!--<ul>
             <li><input type="image" width="90px" height="45px" src="img/profile.png" alt="profile"></li>
@@ -87,59 +158,114 @@
             </form>
         <script>
           document.getElementById("myButton").onclick = function() {
-          document.getElementById("login").style.display = "block";
+          document.getElementById("login").style.display = "inline-block";
         }
         </script>
-        </nav>
-    <aside><a href="*" target="_blank" id="menubar">Topic</a><hr>
-        <tab border="0.1">
+    </nav>
+    <aside><div href="*" target="_blank" id="menubar"><h1>Topic</h1></div><hr style="width: 97%;">
+        <div class="tasi">
             <div class="topic">
                 <div class="count"><strong>번호</strong></div>
-                <div class="item"><strong>제목</strong></div>
-                <div class="item"><strong>작성자</strong></div>
+                <div class="title"><strong>제목</strong></div>
+                <div class="name"><strong>작성자</strong></div>
+                <div class="stats"><strong>상태</strong></div>
             </div>
             <div class="topic">
                 <div class="count">1</div>
-                <div class="item">동물</div>
-                <div class="item">ㅇㅇ</div>
+                <div class="item"><a href="">동물</a></div>
+                <div class="name">ㅇㅇ</div>
+                <div class="stats">10</div>
             </div>
             <div class="topic">
                 <div class="count">2</div>
-                <div class="item">IT</div>
-                <div class="item">ㅁㅁ</div>
+                <div class="item"><a href="">IT</a></div>
+                <div class="name">ㅁㅁ</div>
+                <div class="stats">30</div>
             </div>
             <div class="topic">
                 <div class="count">3</div>
-                <div class="item">우주</div>
-                <div class="item">ㅂㅂ</div>
+                <div class="item"><a href="">우주</a></div>
+                <div class="name">ㅂㅂ</div>
+                <div class="stats">5</div>
             </div>
             <div class="topic">
                 <div class="count">4</div>
-                <div class="item">고민</div>
-                <div class="item">ㅎㅎ</div>
+                <div class="item"><a href="">고민</a></div>
+                <div class="name">ㅎㅎ</div>
+                <div class="stats">2</div>
             </div>
             <div class="topic">
                 <div class="count">5</div>
-                <div class="item">도움</div>
-                <div class="item">ㅠㅠ</div>
+                <div class="item"><a href="">도움</a></div>
+                <div class="name">ㅠㅠ</div>
+                <div class="stats">1</div>
             </div>
-        </tab>
+        </div>
     </aside>
-    <article><a href="*" target="_blank" id="menubar">News</a><hr>
-        <tab border="0.1">
-            <div class="topic">
-                <div class="item"><img width="70px" height="70px" src="img/OIP.jpg" alt="hamster"></div>
-                <div class="item">설치류 인스톨중</div>
+    <article><div href="*" target="_blank" id="menubar"><h1>News</h1></div><hr style="width: 97%;">
+        <div class="tasi">
+            <div class="news">
+                <div class="item"><img width="89px" height="89px" src="img/OIP.jpg" alt="hamster"></div>
+                <div class="item"><a href="">설치류 인스톨중</a></div>
             </div>
-            <div class="topic">
-                <div class="item"><img width="70px" height="70px" src="img/hamster tag.png" alt="hamster"></div>
-                <div class="item">저는 산책시키고 다녀요</div>
+            <div class="news">
+                <div class="item"><img width="89px" height="89px" src="img/hamster tag.png" alt="hamster"></div>
+                <div class="item"><a href="">저는 산책시키고 다녀요</a></div>
             </div>  
-        </tab>
+        </div>
     </article>
-    <section><table><a href="*" target="_blank" id="menubar">Post</a></table>
-        
+    <section>
+        <table>
+            <div class="container">
+                <div class="subforum">
+                    <div class="subforum-title">
+                        <h1><a href="*" target="_blank" id="menubar">Post</a></h1>
+                    </div><hr>
+                    <div class="subforum-row">
+                        <div></div>
+                        <div class="subforum-description subforum-column">
+                            <h4><a href="#">규칙</a></h4>
+                            <p>생활 하면서 지켜야 할 규칙</p>
+                        </div>
+                        <div class="subforum-stats subforum-column center">
+                            <span>1 Posts | 1 Topics</span>
+                        </div>
+                        <div class="subforum-info subforum-column">
+                            <b><a href="">마지막 게시</a></b> <a href="">admin</a><b>님 이 작성 함</b>
+                            <br>작성 날 <small>2023/11/22</small>
+                        </div>
+                    </div>
+                    <div class="subforum-row">
+                        <div></div>
+                        <div class="subforum-description subforum-column">
+                            <h4><a href="#">잡담</a></h4>
+                            <p>주제를 가지고 잡담하는 곳</p>
+                        </div>
+                        <div class="subforum-stats subforum-column center">
+                            <span>5 Posts | 48 Topics</span>
+                        </div>
+                        <div class="subforum-info subforum-column">
+                            <b><a href="">마지막 게시</a></b> <a href="">ㅇㅇ</a><b>님 이 작성 함</b>
+                            <br>작성 날 <small>2023/11/22</small>
+                        </div>
+                    </div>
+                    <div class="subforum-row">
+                        <div></div>
+                        <div class="subforum-description subforum-column">
+                            <h4><a href="#">쓰레기 통</a></h4>
+                            <p></p>
+                        </div>
+                        <div class="subforum-stats subforum-column center">
+                            <span>0 Posts | 0 Topics</span>
+                        </div>
+                        <div class="subforum-info subforum-column">
+                            <b><a href="">마지막 게시</a></b> <a href=""></a><b>님 이 작성 함</b>
+                            <br>작성 날 <small></small>
+                        </div>
+                    </div>
+                </div>
+        </table>
     </section>
-    <footer>footer</footer>
+    <footer></footer>
 </body>
 </html>
