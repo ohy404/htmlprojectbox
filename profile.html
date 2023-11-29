@@ -48,8 +48,7 @@
           document.getElementById("login").style.display = "block";
         }
         </script>
-        </nav>    
-        <aside>
+        </nav>    <aside>
             <div class="container">
                 <div class="subforum">
                     <div href="*" target="_blank" id="menubar"><h1>Topic</h1></div><hr style="width: 97%;">
@@ -117,31 +116,25 @@
             <div class="container">
                 <div class="subforum">
                     <div class="subforum-title">
-                        <h1><a href="*" target="_blank" id="menubar">회원가입</a></h1>
+                        <h1><a href="*" target="_blank" id="menubar">프로필</a></h1>
                             <fieldset style="text-align: center;">
-                            <legend><h3>회원 가입이신가요?</h3></legend><hr>
-                                <form>
-                                    아이디   : <input type="text" value="" id="user"><br>
-                                    이메일   : <input type="text" value="" id="email"><br>
-                                    암호     : <input type="password" value="" maxlength="" id="pass"><br>
-                                    암호확인 : <input type="password" value="" maxlength="" id="passde"><br>
-                                    <button type="submit">회원 가입</button><br>
+                            <legend></legend><hr>
+                                <form class="profile">
+                                    <div>
+                                        <img src="img/OIP.jpg" alt="myprofileimg" width="128px" height="128px">
+                                    </div>
+                                    <div style="text-align: left;">
+                                            <p>아이디 : admin<br></p>
+                                            <p>이메일 : admin@ohy404.io<br></p>
+                                            <p>주제 : <a href="*">11</a>개 토픽 : <a href="*">12</a>개</p>
+                                    </div>
+                                    <div style="text-align: left;">
+                                        자기 소개<br>
+                                        <textarea rows="4" cols="50" maxlength="200">
+                                        </textarea><br>
+                                    </div>
+                                </form>
                             </fieldset>
-                            <fieldset style="text-align: center;">
-                            </form>
-                            <legend><h3>이미 회원이신가요?</h3></legend><hr>
-                                <form>
-                                아이디 : <input type="text" value=""><br>
-                                이메일 : <input type="text" value=""><br>
-                                <button type="submit">비밀 번호 초기화</button><br>
-                            </form>
-                            </fieldset>
-                            <form id="createpost" action="post.html">
-                                <input type="text" id="name">
-                                <input type="text" id="age">
-                                <input type="text" id="topic">
-                                <input type="submit" id="submit">
-                            </form>
                         </div>
                     </div>
                 </div>

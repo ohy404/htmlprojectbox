@@ -1,0 +1,112 @@
+html,body{margin:0; padding:0;height:100%;background:rgb(122, 122, 122);color :azure;}
+header{width:100%;height:200px;}
+section{width: 100%;float: left;}
+aside{width: 50%;float: left;}
+article{width: 50%;float: right;}
+footer{width: 100%;height: 15%;clear: both;}
+/*.topic{display: flex; flex-flow: row wrap;flex-grow: 1; justify-content: space-between;}
+.item {flex: 1 1 0;} .item:nth-child(2) {flex: 6 1 0;}
+.count{flex: 1 1 0; text-align: center;}
+*/
+#check-btn { display: none; } #check-btn:checked ~ .menubars { display: block; } 
+div strong{font-size: medium;font-style: oblique;}
+#menubar{
+    font-family: 'Segoe Print', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none; /*링크 보이지 않게 */
+    color :azure;
+    background-color:#292B2E;
+    padding: 10px;
+    border-radius: 5px;
+    margin:10px;
+}
+#titleindex{
+    font-family: 'Segoe Print', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none; /*링크 보이지 않게 */
+    color :azure;
+        
+}
+#menubar ul{/*여백과 패딩 모두 0*/
+    margin: 0;
+    padding: 0;
+    width: 567px; /*모든 아이템(<li>)을 한 줄에 품을 수 있는 폭*/
+    color :azure;
+}
+#menubar ul li{
+    display: inline-block;
+    list-style-type: none; /*마커 삭제*/
+    padding: 0px 15px;
+    color :azure;
+}
+#menubar ul li a{
+    text-decoration: none; /*링크 보이지 않게 */
+    color :azure;
+}
+@keyframes menuanime{
+    to{text-decoration-thickness: 5px;}
+    from{text-decoration-thickness: 1px;}
+}
+#menubar ul li:hover{
+    text-decoration:underline;
+    text-decoration-color: skyblue;
+    animation-name: menuanime;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+#login form{
+    border:solid 1px #c0c0c0;
+    padding:10px;
+    display: none;
+}
+.container{
+    margin: 5px;
+    padding: 5px;
+}
+.subforum{
+    margin-top:20px;
+}
+.subforum-title{
+    background-color:#292B2E;
+    padding: 5px;
+    border-radius: 5px;
+    margin:4px;
+}
+.subforum-row{
+    display: grid;
+    grid-template-columns: 0% 67% 13% 20%;
+}
+.subforum-column,.topic,.news{
+    padding: 10px;
+    margin:4px;
+    border-radius: 5px;
+    background-color:#292B2E;
+}
+.topic{
+    display: grid;
+    grid-template-columns: 5% 75% 15% 5%;
+    margin: 5px;
+    padding: 5px;
+}
+.tasi{
+    margin: 5px;
+    padding: 1px;
+}
+.count{
+    text-align: center;
+}
+.stats{
+    text-align: center;
+}
+.news{
+    display: grid;
+    grid-template-columns: 90px auto 0% 0%;
+    margin: 5px;
+    padding: 5px;
+}
+.subforum-description *{
+    margin-block: 0;
+    }
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
