@@ -189,33 +189,45 @@
                         <br>작성 날 <small>2023/11/22</small>
                     </div>
                 </div>
+                <div id="temp"></div>
                 <div class="postmaker">
                     <input type="button" id="postmakerButton" value="포스트 작성"><br>
                     <form id="postmak" style="display: none;">
-                        <input type="text" id="postname" placeholder="주제 제목"/>
-                        <input type="text" id="postinfo" size="30" placeholder="주제 설명"/>
-                        <input type="button" id="postmake" value="포스트 생성">
+                        <div>
+                            <div class="subforum-column">
+                                <div></div>
+                                <div>
+                                    <input type="text" id="postname" placeholder="주제 제목" >
+                                </div>
+                                <div>
+                                    <textarea rows="4" cols="50" maxlength="200" type="text" id="postinfo" size="30" placeholder="주제 설명"></textarea>
+                                </div>
+                                <div><input type="button" id="postmake" value="포스트 생성"></div>
+                            </div>
+                        </div>
                     </form>
-                    <script>
-                        function myfuna(){
-                            var postmak = document.getElementById("postmak");
-                            var postmakerButton = document.getElementById("postmakerButton");
-                            var postmake = document.getElementById("postmake");
-                    }
-                        if (postmak.style.display === "none"){
-                            postmakerButton.onclick = function() {
-                        postmak.style.display = "block";
-                        }
-                    }
-                        postmake.onclick = function() {
-                        postmak.style.display = "none";
-                            
-                    }
-
-                    </script>
                 </div>
             </div>
         </div>
+        <script>
+            function myfuna(){
+                var postmak = document.getElementById("postmak");
+                var postmakerButton = document.getElementById("postmakerButton");
+                var postmake = document.getElementById("postmake");
+        }
+            if (postmak.style.display === "none"){
+                postmakerButton.onclick = function() {
+            postmak.style.display = "block";
+            }
+        }
+            postmake.onclick = function() {
+                var postname = document.getElementById("postname").value;
+                var postinfo = document.getElementById("postinfo").value;
+            postmak.style.display = "none";
+                document.getElementById("temp").innerHTML = '<div class="subforum-row">'+'<div></div>'+'<div class="subforum-description subforum-column"><h4><a href="*">'+postname+'</a></h4><p>'+postinfo+'</p></div><div class="subforum-stats subforum-column center"><span>0 Topics</span></div><div class="subforum-info subforum-column"><b><a href="">마지막 게시</a></b> <a href="">admin</a><b>님이 작성</b><br>작성 날 <small>방금</small></div></div>';
+                
+            }
+        </script>
     </section>
     <footer></footer>
 </body>
