@@ -33,9 +33,9 @@
         </form></table>-->
         <ul>
             <li><a href="../profile.html" target="_blank">Profile</a></li>
-            <li><a href="*" target="_blank">Message</a></li>
+            <li><a href="#" target="_blank">Message</a></li>
             <li><a id="myButton">Login</a></li>
-            <li><a href="*" target="_blank">Logout</a></li>
+            <li><a href="#" target="_blank">Logout</a></li>
             <li><a href="../class.html" target="_blank">Class</a></li>
         </ul>
         <form id="login" style="display: none;">
@@ -102,11 +102,11 @@
                     <div class="tasi">
                         <div class="news">
                             <div class="item"><img width="89px" height="89px" src="img/OIP.jpg" alt="hamster"></div>
-                            <div class="item"><a href="">설치류 인스톨중</a></div>
+                            <div class="item"><a href="../news/1.html">설치류 인스톨중</a></div>
                         </div>
                         <div class="news">
                             <div class="item"><img width="89px" height="89px" src="img/hamster tag.png" alt="hamster"></div>
-                            <div class="item"><a href="">저는 산책시키고 다녀요</a></div>
+                            <div class="item"><a href="../news/2.html">저는 산책시키고 다녀요</a></div>
                         </div>
                     </div>
                 </div>
@@ -125,9 +125,10 @@
                         <hr><p>관리자</p>
                     </div>
                         <div class="subforum-description subforum-column">
-                            <p class="topicinfo">2023년 11월 20일 게시</p><br>
+                            <p class="topiccount">#1</p><p class="topicinfo">2023년 11월 20일 게시</p><br>
                             <p>사람 배려하기</p>
                             <p>욕설하지 않기</p>
+                            <p>주제에 맞는 이야기를 해주셔야 합니다</p>
                         </div>
                         <div></div>
                         <div></div>
@@ -166,7 +167,7 @@
             postmake.onclick = function() {
                 var postinfo = document.getElementById("postinfo").value;
             postmak.style.display = "none";
-                document.getElementById("temp").innerHTML = '<div class="subforum-post"><div class="subforum-column"><img src="img/OIP.jpg" alt="" class="avatar"><br><p><a href="../profile.html" target="_blank">admin</a></p><hr><p>관리자</p></div><div class="subforum-description subforum-column"><p class="topicinfo">방금 게시</p><br><p>'+postinfo+'</p></div><div></div><div></div></div>'
+                document.getElementById("temp").innerHTML = '<div class="subforum-post"><div class="subforum-column"><img src="img/OIP.jpg" alt="" class="avatar"><br><p><a href="../profile.html" target="_blank">admin</a></p><hr><p>관리자</p></div><div class="subforum-description subforum-column"><p class="topiccount">#1</p><p class="topicinfo">방금 게시</p><br><p>'+postinfo+'</p></div><div></div><div></div></div>'
                 postmakerButton.value = "규칙 수정"
                 postmakerButton.style.display = "block"
             }

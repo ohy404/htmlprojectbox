@@ -33,9 +33,9 @@
         </form></table>-->
         <ul>
             <li><a href="../profile.html" target="_blank">Profile</a></li>
-            <li><a href="*" target="_blank">Message</a></li>
+            <li><a href="#" target="_blank">Message</a></li>
             <li><a id="myButton">Login</a></li>
-            <li><a href="*" target="_blank">Logout</a></li>
+            <li><a href="#" target="_blank">Logout</a></li>
             <li><a href="../class.html" target="_blank">Class</a></li>
         </ul>
         <form id="login" style="display: none;">
@@ -102,11 +102,11 @@
                     <div class="tasi">
                         <div class="news">
                             <div class="item"><img width="89px" height="89px" src="img/OIP.jpg" alt="hamster"></div>
-                            <div class="item"><a href="">설치류 인스톨중</a></div>
+                            <div class="item"><a href="../news/1.html">설치류 인스톨중</a></div>
                         </div>
                         <div class="news">
                             <div class="item"><img width="89px" height="89px" src="img/hamster tag.png" alt="hamster"></div>
-                            <div class="item"><a href="">저는 산책시키고 다녀요</a></div>
+                            <div class="item"><a href="../news/2.html">저는 산책시키고 다녀요</a></div>
                         </div>
                     </div>
                 </div>
@@ -225,7 +225,7 @@
                 var postname = document.getElementById("postname").value;
                 var postinfo = document.getElementById("postinfo").value;
             postmak.style.display = "none";
-                document.getElementById("temp").innerHTML = '<div class="subforum-row">'+'<div></div>'+'<div class="subforum-description subforum-column"><h4><a href="*">'+postname+'</a></h4><p>'+postinfo+'</p></div><div class="subforum-stats subforum-column center"><span>0 Topics</span></div><div class="subforum-info subforum-column"><b><a href="">마지막 게시</a></b> <a href="">admin</a><b>님이 작성</b><br>작성 날 <small>방금</small></div></div>';
+                document.getElementById("temp").innerHTML = '<div class="subforum-row"><div></div><div class="subforum-description subforum-column"><h4><a href="*">'+postname+'</a></h4><p>'+postinfo+'</p></div><div class="subforum-stats subforum-column center"><span>1 Topics</span></div><div class="subforum-info subforum-column"><b><a href="">마지막 게시</a></b> <a href="">admin</a><b>님이 작성</b><br>작성 날 <small>방금</small></div></div>';
                 postmakerButton.value = "포스트 수정"
                 postmakerButton.style.display = "block"
             }
