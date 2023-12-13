@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Myforum</title>
 <style>
         @import url(post/css/forumstyle.css);
 </style>
@@ -33,7 +33,6 @@
         </form></table>-->
         <ul>
             <li><a href="profile.html" target="_blank">Profile</a></li>
-            <li><a href="#" target="_blank">Message</a></li>
             <li><a id="myButton">Login</a></li>
             <li><a href="#" target="_blank">Logout</a></li>
             <li><a href="class.html" target="_blank">Class</a></li>
@@ -52,7 +51,6 @@
             <div class="container">
                 <div class="subforum">
                     <div href="*" target="_blank" id="menubar"><h1>Topic</h1></div><hr style="width: 97%;">
-                        <div class="tasi">
                             <div class="topic">
                                 <div class="count"><strong>번호</strong></div>
                                 <div class="title"><strong>제목</strong></div>
@@ -62,31 +60,31 @@
                             <div class="topic">
                                 <div class="count">1</div>
                                 <div class="item"><a href="post/2.html">동물</a></div>
-                                <div class="name">ㅇㅇ</div>
+                                <div class="name"><a href="user/2.html">ㅇㅇ</a></div>
                                 <div class="stats">5</div>
                             </div>
                             <div class="topic">
                                 <div class="count">2</div>
                                 <div class="item"><a href="post/3.html">IT</a></div>
-                                <div class="name">ㅁㅁ</div>
+                                <div class="name"><a href="user/3.html">ㅁㅁ</a></div>
                                 <div class="stats">4</div>
                             </div>
                             <div class="topic">
                                 <div class="count">3</div>
                                 <div class="item"><a href="post/4.html">우주</a></div>
-                                <div class="name">ㅂㅂ</div>
+                                <div class="name"><a href="user/4.html">ㅂㅂ</a></div>
                                 <div class="stats">3</div>
                             </div>
                             <div class="topic">
                                 <div class="count">4</div>
                                 <div class="item"><a href="post/5.html">고민</a></div>
-                                <div class="name">ㅎㅎ</div>
+                                <div class="name"><a href="user/5.html">ㅎㅎ</a></div>
                                 <div class="stats">2</div>
                             </div>
                             <div class="topic">
                                 <div class="count">5</div>
                                 <div class="item"><a href="post/6.html">도움</a></div>
-                                <div class="name">ㅠㅠ</div>
+                                <div class="name"><a href="user/6.html">ㅠㅠ</a></div>
                                 <div class="stats">1</div>
                             </div>
                         </div>
@@ -126,7 +124,7 @@
                                     <div style="text-align: left;">
                                             <p>아이디 : admin<br></p>
                                             <p>이메일 : admin@ohy404.io<br></p>
-                                            <p>주제 : <a href="*">11</a>개 토픽 : <a href="*">12</a>개</p>
+                                            <p>주제 : <a href="#">11</a>개 토픽 : <a href="#">12</a>개</p>
                                     </div>
                                     <div style="text-align: left;">
                                         자기 소개<br>
@@ -140,32 +138,6 @@
                 </div>
             </div>
         </section>
-<!--        <script>
-            localStorage.map(function(forumPost){
-                $('.posts').append( "<ul>
-                         <li>"forumPost.name"</li>
-                         <li>"forumPost.age"</li>
-                         <li>"forumPost.topic"</li>
-                       </ul>")
-            });
-            localStorage.setItem(key, value);
-            //store
-            localStorage.setItem("posts", JSON.stringify(posts));
-
-            //get
-            var posts = JSON.parse( localStorage.getItem("posts") || "[]" );
-            html = '';
-
-            for(var i=0; i<posts.length; i++) {
-                html += '<div class="post">';
-                html += '<b>' + posts[i].topic + '</b> by ' + posts[i].user;
-                html += '</div>';
-            }
-            /*https://stackoverflow.com/questions/30490497/creating-a-forum-with-html5-local-storage*/
-
-            //output the html somehow, with jquery that could be
-            $("body").append(html);
-        </script>-->
     </section>
     <footer>footer</footer>
 </body>

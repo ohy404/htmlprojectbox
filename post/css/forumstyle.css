@@ -157,3 +157,9 @@ div strong{font-size: medium;font-style: oblique;}
 .repost b{
     font-size: small;
 }
+a:link{
+    color: skyblue;
+}
+a:visited {
+    color : blue;
+}
